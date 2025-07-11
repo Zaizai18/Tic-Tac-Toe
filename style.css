@@ -1,0 +1,160 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 158, 177);
+    }
+
+h2 {
+    font-size: 35px;
+    color: rgb(161, 25, 130);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+   
+#main-text {
+    font-size: 68px;
+    color: rgb(116, 8, 49);
+    text-shadow: 4px 3px rgb(255, 199, 230);
+    margin-bottom: 5px;
+}
+
+#design {
+    text-align: center;
+    margin-top: -30px;
+    text-shadow: 4px 4px rgb(0, 0, 0);
+    color: rgb(255, 199, 230);
+}
+
+.center {
+    text-align: center;
+}
+    
+.flex-container {
+    /* In order to use flex-box we need to first set our display property */
+    display: flex;
+    /* center the container horizontally */
+    justify-content: center;
+    /* this will center content vertically */
+    align-items: center;
+    /* tells the container to align the children in columns rather than rows */
+}
+
+.flex-column {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    /* tells the container to drop down once it reaches max-width */
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+    height: 430px;
+    width: 432px;
+}
+
+#main-image {
+    width: auto;
+    height: 300px;
+    border-style: double;
+    border-color: rgb(253, 158, 177);
+    border-width: 5px;
+    margin-top: 30px;
+}  
+
+.square {
+    border: 2px solid rgb(116, 8, 49);
+    height: 140px;
+    width: 140px;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+    
+.button2 {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(116, 8, 49);
+    border: 2px solid rgb(116, 8, 49);
+    height: 55px;
+    width: 180px;
+    background-color: rgb(255, 199, 230);
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+}
+
+.button {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(116, 8, 49);
+    border: 2px solid rgb(116, 8, 49);
+    height: 75px;
+    width: 200px;
+    cursor: pointer; 
+    background-color: rgb(255, 199, 230);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: rgb(255, 199, 230);
+    background-color: rgb(116, 8, 49);
+  }
+#pageLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adds space after the image */
+    padding-bottom: 20px; /* Adds some space from the very bottom */
+}
+
+#names {
+    margin-left: 350px;
+    margin-top: 30px; 
+    font-size: 30px; 
+    color: rgb(116, 8, 49);
+}
+
+#nameInput {
+    margin-left: 10px;
+    margin-top: 35px;
+} 
+
+#commentTextArea {
+    margin-top: 30px;
+    width: 50%;
+    margin-left: 350px;
+}
+
+#comment-list {
+    width: 50%;
+    margin-left: 350px;
+}
+
+#button1 {
+    font-size: 20px;
+    color: rgb(116, 8, 49);
+    border: 2px solid rgb(116, 8, 49);
+    height: 50px;
+    width: 130px;
+    cursor: pointer; 
+    background-color: rgb(255, 199, 230);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.imageCon {
+    display: flex;
+    align-items: center; 
+    gap: 30px; 
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
