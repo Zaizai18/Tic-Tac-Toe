@@ -50,4 +50,4 @@ function saveComments(comments) {
 }
 
 // call load comments when the page load
-//loadComments()
+loadComments()
