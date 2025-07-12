@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <title>Tic-Tac-Toe - Mental Health </title>
 </head>
 <body>
     <div class="container">
         <div class="center">
-            <h1 id="main-text"> ○ Mental Health ○ </h1>
-            <h2 id="design"> ▂ ▂▂▂ ▂ ▂▂▂ ▂ ▂▂▂ ▂▂ </h2>
+            <h1 id="main-text"> ○ Mental Health Quiz ○ </h1>
+            <h2 id="design"> ▂ ▂▂▂ ▂ ▂▂▂ ▂ ▂▂▂ ▂▂ ▂ ▂▂▂ ▂</h2>
         </div>
 
         <div class="imageCon">
-            <!-- Header Image -->
-            <img src= "" alt="Mental Health" >
-       <!-- Blog Content -->
-            <p>write here!</p> 
-        </div>
+            <img src= "https://images.unsplash.com/photo-1621887348744-6b0444f8a058?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="main-image" alt="Mental Health" >
+            <p> Mental Health is really important and should be taken care of as it impacts the quality of life. Mental health includes our emotional, psychological, and social well-being and it affects how we think, feel, and act. There are several ways we can improve our mental health which are by having a proper nutrition, playing games, spending time with friends, joining programs that support mental health and etc. Together we can make the world a better place! </p> 
+        </div> 
+    </div>
+            <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+    <div id="quiz-section">
+        <h2> Quiz: Self-Check</h2>
+        <form id="quiz-form">
+            <div>
+              <p><strong>1. How would you rate your overall mood today?</strong></p>
+              <label><input type="radio" name="q1" value="3" required> 🎉 Feeling Great :D</label><br>
+              <label><input type="radio" name="q1" value="2" required> 😴 Okay, just feel tired :|</label><br>
+              <label><input type="radio" name="q1" value="1" required> 😔 Not Great D:</label><br>
+              <label><input type="radio" name="q1" value="3" required> 🎉 Excited and energetic</label><br>
+              <label><input type="radio" name="q1" value="1" required> 😰 Anxious or stressed</label>
+            </div>
+            
+            <div class="question-block">
+                <p><strong>2. What mental health activities have you been taking part of lately? (Choose all that apply)</strong></p>
+                <label><input type="checkbox" name="q2" value="2"> 🥗 Proper Nutrition and Exercise!</label><br>
+                <label><input type="checkbox" name="q2" value="2"> 🍽️ Spending time with family and friends</label><br>
+                <label><input type="checkbox" name="q2" value="2"> 😴 Having a healthy sleep schedule</label><br>
+                <label><input type="checkbox" name="q2" value="0"> ❌ None</label>
+            </div>
+
+            <div class="question-block">
+                <p><strong>3. How well are you sleeping lately?</strong></p>
+                <label><input type="radio" name="q3" value="3" required> 😴 Great - 8+ hours, well-rested</label><br>
+                <label><input type="radio" name="q3" value="2" required> 😌 Good - 6-8 hours, mostly rested</label><br>
+                <label><input type="radio" name="q3" value="1" required>  Poor - Less than 6 hours, tired</label><br>
+                <label><input type="radio" name="q3" value="1" required> 😫 Very poor - Can't sleep well</label>
+            </div>
+
+            <div class="question-block">
+                <p><strong>4. Have you joined any Mental Health services or campaigns to support you?</strong></p>
+                <label><input type="radio" name="q4" value="2" required> Yes </label><br>
+                <label><input type="radio" name="q4" value="1" required> No </label><br>
+            </div>
+            <button type="button" class="btn btn-primary mb-3" id="button1" onclick="calculateScore()">Submit!</button>
+          </form>
+          <div id="quiz-result" style="display:none;"></div>
+        <div id="quiz-result" style="margin-top: 20px; font-weight: bold;"></div>
     </div>
 
     <div class="col-auto">
-        <div style="display: flex; justify-content: center; gap: 16px; margin-top: 20px;">
+        <div style="display: flex; justify-content: center; gap: 16px; text-align: center; margin-top: 20px;">
             <a id="button1" class="btn btn-primary mb-3" href="index.html">Go Back!</a>
         </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="review.js"></script>
+    <script src="quiz.js"></script>
 
 </body>
 </html>
