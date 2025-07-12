@@ -15,10 +15,12 @@ const winningCombos = [
 let board;
 let turn = 'X';
 let win;
+let playerNames = { X: "Player 1", O: "Player 2" };
 
 /*----- cached element references -----*/
 
 const squares = Array.from(document.querySelectorAll('#board div'));
+const winAudio = new Audio("sounds/trumpet.mp3");
 
 /*----- event listeners -----*/
 document.getElementById('board').addEventListener('click', handleTurn);
@@ -36,15 +38,18 @@ function getWinner() {
         return winner ? winner : board.includes('') ? null : 'T';
 };
 
-function handleTurn() {
+function handleTurn(event) {
     let idx = squares.findIndex(function(square) {
         return square === event.target;
     });
+    // Prevent move if square is already filled or game is over
+    if (board[idx] || win) return;
+
     board[idx] = turn;
-    turn = turn === 'X' ? 'O' : 'X';
     win = getWinner();
+    turn = turn === 'X' ? 'O' : 'X';
     render();
-};
+}
 
 function init() {
     board = [
@@ -52,22 +57,25 @@ function init() {
     '', '', '',
     '', '', ''
     ];
+    win = null; 
+    winAudio.pause();
+    winAudio.currentTime = 0;
     render();
 };
 
 function render() {
     board.forEach(function(mark, index) {
-        //this moves the value of the board item into the squares[idx]
         squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    messages.textContent = win === 'T'
+        ? `That's a tie!!!`
+        : win
+            ? `${playerNames[win]} wins the game!`
+            : `It's ${playerNames[turn]}'s turn!`;
 
-    // Play music if there is a winner (not a tie)
     if (win && win !== 'T') {
-        const winAudio = new Audio("sounds/trumpet.mp3");
+        winAudio.currentTime = 0;
         winAudio.play();
     }
 }
-
-
 init();
